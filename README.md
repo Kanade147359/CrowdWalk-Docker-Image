@@ -6,21 +6,21 @@ The Docker environment includes all necessary dependencies (OpenJDK, fonts, etc.
 
 ---
 
-## How to Build
-
-Clone this repository and build the Docker image with:
-
-```bash
-docker build -t crowdwalk-docker .
-```
-
-## How to Run (with GUI)
+## Quick Start
 
 To run CrowdWalk with its GUI interface, you must have an X11 server running on your host system.
 
 * macOS: [XQuartz](https://www.xquartz.org/)
 * Windows: [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
 * Linux: Native X11 server is typically available
+
+Clone this repository and build the Docker image with:
+
+```bash
+git clone https://github.com/watanabe-appi/CrowdWalk-Docker-Image.git
+cd CrowdWalk-Docker-Image
+docker build -t crowdwalk-docker .
+```
 
 Then run the following commands:
 
@@ -31,9 +31,7 @@ docker run --rm -e DISPLAY=host.docker.internal:0 crowdwalk-docker
 
 Note: You may need to adjust DISPLAY depending on your platform or environment.
 
-This is a sample simulation of the movement of spectators returning home after watching the Kanmon Strait Fireworks Festival from the Mojiko side.
-
-On the first run, it may take several minutes to start, as the application downloads background map images.
+Here is a sample simulation of the movement of spectators returning home after watching the Kanmon Strait Fireworks Festival from the Mojiko side. On the first run, it may take several minutes to start, as the application downloads background map images.
 
 ```sh
 sh quickstart.sh sample/stop-sample2/properties.json -g2 -lError
