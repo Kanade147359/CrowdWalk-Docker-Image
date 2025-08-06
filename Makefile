@@ -9,7 +9,7 @@ all:
 ## メインターゲット（OS自動判別）
 run:
 	@OS=$$(uname); \
-	if [[ "$$OS" == "Darwin" ]]; then \
+	if [ "$$OS" = "Darwin" ]; then \
 		$(MAKE) run_on_mac; \
 	elif grep -qi "microsoft" /proc/version; then \
 		$(MAKE) run_on_wsl; \
