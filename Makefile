@@ -3,5 +3,5 @@ all:
 
 run:
 	xhost + localhost
-	docker run --rm -e DISPLAY=host.docker.internal:0 crowdwalk-docker
+	docker run -it --rm -e DISPLAY=host.docker.internal:0 crowdwalk-docker
 	xhost -

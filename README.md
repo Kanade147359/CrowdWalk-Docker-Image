@@ -31,6 +31,14 @@ docker run --rm -e DISPLAY=host.docker.internal:0 crowdwalk-docker
 
 Note: You may need to adjust DISPLAY depending on your platform or environment.
 
+This is a sample simulation of the movement of spectators returning home after watching the Kanmon Strait Fireworks Festival from the Mojiko side.
+
+On the first run, it may take several minutes to start, as the application downloads background map images.
+
+```sh
+sh quickstart.sh sample/stop-sample2/properties.json -g2 -lError
+```
+
 ## Alternative: Using Makefile
 
 This image also supports a Makefile-based workflow:

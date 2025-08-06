@@ -26,6 +26,6 @@ RUN apt-get update && \
 ENV LANG=ja_JP.UTF-8 \
     JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
 
-WORKDIR /root/CrowdWalk/crowdwalk
+WORKDIR /CrowdWalk/crowdwalk
 
 CMD [ "bash" ]
