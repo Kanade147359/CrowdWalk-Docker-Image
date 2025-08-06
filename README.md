@@ -22,29 +22,21 @@ cd CrowdWalk-Docker-Image
 docker build -t crowdwalk-docker .
 ```
 
-Then run the following commands:
+After building the Docker image, you can launch CrowdWalk using the following command:
 
 ```sh
-xhost + localhost
-docker run --rm -e DISPLAY=host.docker.internal:0 crowdwalk-docker
+make run
 ```
 
-Note: You may need to adjust DISPLAY depending on your platform or environment.
+This will automatically detect your operating system and run the Docker container with the appropriate X11 settings.
 
-Here is a sample simulation of the movement of spectators returning home after watching the Kanmon Strait Fireworks Festival from the Mojiko side. On the first run, it may take several minutes to start, as the application downloads background map images.
+Once the Docker container is running, you can start the simulation with the following command:
 
 ```sh
 sh quickstart.sh sample/stop-sample2/properties.json -g2 -lError
 ```
+This is a sample simulation of the movement of spectators returning home after watching the Kanmon Strait Fireworks Festival from the Mojiko side. On the first run, it may take several minutes to start, as the application downloads background map images.
 
-## Alternative: Using Makefile
-
-This image also supports a Makefile-based workflow:
-
-```sh
-make        # Builds the application (runs Gradle inside the container)
-make run    # Runs the application
-```
 
 ## License
 The original [CrowdWalk](https://github.com/crest-cassia/CrowdWalk) project is released under the MIT License.
