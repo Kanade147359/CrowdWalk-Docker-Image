@@ -22,9 +22,17 @@ run:
 run_on_mac:
 	@echo "Running on macOS..."
 	@xhost +localhost
-	@docker run -it --rm \
+        @XA=""; \
+	if [ -f "$$HOME/.Xauthority" ]; then \
+		XA="-v $$HOME/.Xauthority:/root/.Xauthority -e XAUTHORITY=/root/.Xauthority"; \
+	fi; \
+	docker run --rm -it \
+		--add-host=host.docker.internal:host-gateway \
 		-e DISPLAY=host.docker.internal:0 \
-		$(IMAGE_NAME)
+		$${XA} \
+		$(COMMON_ENV) \
+		$(IMAGE_NAME) \
+		bash -lc 'cd /CrowdWalk/crowdwalk && sh quickstart.sh sample/stop-sample2/properties.json -g2 -lError'
 	@xhost -
 
 ## For WSL
