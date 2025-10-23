@@ -19,6 +19,23 @@ Clone this repository and build the Docker image with:
 ```bash
 git clone https://github.com/watanabe-appi/CrowdWalk-Docker-Image.git
 cd CrowdWalk-Docker-Image
+./setup.sh
+docker compose up -d
+```
+
+After running docker compose up -d, please execute docker exec -it crowdwalk bash to enter the container.
+
+```bash
+docker exec -it crowdwalk bash
+```
+
+## use docker build
+
+Clone this repository and build the Docker image with:
+
+```bash
+git clone https://github.com/watanabe-appi/CrowdWalk-Docker-Image.git
+cd CrowdWalk-Docker-Image
 docker build -t crowdwalk-docker .
 ```
 

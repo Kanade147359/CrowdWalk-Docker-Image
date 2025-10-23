@@ -6,10 +6,24 @@ services:
     image: crowdwalk:latest
     container_name: crowdwalk
     working_dir: /CrowdWalk/crowdwalk
+
     environment:
       - LANG=ja_JP.UTF-8
+      - TZ=${TZ}
       - JAVA_OPTS=-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8
+
+      # from .env (setup.sh)
+      - DISPLAY=${XDISPLAY}
+      - LIBGL_ALWAYS_INDIRECT=${LIBGL_ALWAYS_INDIRECT}
+      - LIBGL_ALWAYS_SOFTWARE=${LIBGL_ALWAYS_SOFTWARE}
+      - MESA_LOADER_DRIVER_OVERRIDE=${MESA_LOADER_DRIVER_OVERRIDE}
+      - PRISM_OPTS=${PRISM_OPTS}
+      - AWT_OPTS=${AWT_OPTS}
+      - FX_OPENS=${FX_OPENS}
+
+    volumes:
+      - ./.gradle:/root/.gradle           
+      - ./projects:/CrowdWalk/projects    
+
     tty: true
     stdin_open: true
-    volumes:
-      - ./.gradle:/root/.gradle
