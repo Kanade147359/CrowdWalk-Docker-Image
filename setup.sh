@@ -10,13 +10,13 @@ ENV_FILE="${ROOT_DIR}/.env"
 # ---- options ---------------------------------------------------------------
 TZ_V="${TZ:-Asia/Tokyo}"
 FORCE_DISPLAY=""
-SW_RENDER=1   # default: enable software rendering
+SW_RENDER=0  
 
 usage() {
   cat <<USAGE
 Usage: $0 [--hw] [--sw] [--display HOST:DISP] [--tz TZ]
-  --hw                ハードウェア描画寄りに（SW描画フラグを出力しない）
-  --sw                ソフトウェア描画を強制（デフォルト）
+  --hw                ハードウェア描画寄りに（デフォルト）
+  --sw                ソフトウェア描画を強制
   --display VAL       DISPLAY を明示指定（例: 172.24.160.1:0）
   --tz TZ             タイムゾーン（既定: Asia/Tokyo）
 USAGE

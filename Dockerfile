@@ -6,13 +6,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y \
       git vim wget gnupg x11-apps software-properties-common locales \
-      libgl1-mesa-dri libgl1 libglu1-mesa mesa-utils \
+      libgl1-mesa-dri libgl1 libglu1-mesa mesa-utils libosmesa6 \
       libxext6 libxrender1 libxtst6 libxi6 && \
     add-apt-repository -y ppa:openjdk-r/ppa && \
     apt-get update && \
     apt-get install -y \
-      openjdk-19-jdk openjfx \
-      fonts-noto-cjk language-pack-ja && \
+    openjdk-17-jdk openjfx \
+    fonts-noto-cjk language-pack-ja && \
     locale-gen ja_JP.UTF-8 && \
     update-locale LANG=ja_JP.UTF-8 && \
     \
