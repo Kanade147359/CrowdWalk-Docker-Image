@@ -23,7 +23,7 @@ services:
 
     volumes:
       - ./.gradle:/root/.gradle           
-      - ./projects:/CrowdWalk/projects    
+      - ./projects:/CrowdWalk/crowdwalk/projects    
 
     tty: true
     stdin_open: true
