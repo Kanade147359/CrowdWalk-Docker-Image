@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group defaultHeight="0.0" id="_p00000" imageFileName="" maxHeight="5.0" minHeight="-5.0" pNorthWestX="5.0" pNorthWestY="45.0" pSouthEastX="600.0" pSouthEastY="600.0" pTheta="0.0" r="0.0" scale="1.0" sx="1.0" sy="1.0" tx="0.0" ty="0.0" zone="0">
+  <tag>root</tag>
+  <Group defaultHeight="0.0" id="_p00001" imageFileName="" maxHeight="5.0" minHeight="-5.0" pNorthWestX="5.0" pNorthWestY="45.0" pSouthEastX="600.0" pSouthEastY="600.0" pTheta="0.0" r="0.0" scale="1.0" sx="1.0" sy="1.0" tx="0.0" ty="0.0" zone="0">
+    <tag>Road</tag>
+    <Node height="0.0" id="_p00002" x="176.0" y="105.0">
+      <tag>Start1</tag>
+      <link id="_p00007"/>
+    </Node>
+    <Node height="0.0" id="_p00003" x="181.0" y="389.0">
+      <tag>Start2</tag>
+      <link id="_p00006"/>
+    </Node>
+    <Node height="0.0" id="_p00004" x="498.0" y="256.0">
+      <link id="_p00006"/>
+      <link id="_p00007"/>
+      <link id="_p00008"/>
+    </Node>
+    <Node height="0.0" id="_p00005" x="800.0" y="264.0">
+      <tag>Goal</tag>
+      <link id="_p00008"/>
+    </Node>
+    <Link from="_p00004" id="_p00006" length="343.77027212951384" to="_p00003" width="5.0"/>
+    <Link from="_p00002" id="_p00007" length="355.64729719203547" to="_p00004" width="5.0"/>
+    <Link from="_p00004" id="_p00008" length="302.105941682715" to="_p00005" width="5.0"/>
+  </Group>
+</Group>

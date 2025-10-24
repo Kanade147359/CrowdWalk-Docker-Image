@@ -1,0 +1,25 @@
+#{"version": 2}
+[
+    {
+        "rule":"EACH",
+        "agentType":{"className":"NaiveAgent"},
+        "speedModel":"CROSSING",
+        "startPlace":"Start1",
+        "startTime":"07:30",
+        "duration":1,
+        "total":50,
+        "goal":"Goal",
+        "plannedRoute":[{}]
+    },
+    {
+        "rule":"EACH",
+        "agentType":{"className":"NaiveAgent"},
+        "speedModel":"CROSSING",
+        "startPlace":"Start2",
+        "startTime":"07:30",
+        "duration":1,
+        "total":50,
+        "goal":"Goal",
+        "plannedRoute":[{}]
+    }
+]

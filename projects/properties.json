@@ -1,0 +1,8 @@
+{
+    "map_file": "test.xml",
+    "generation_file": "generation.json",
+    "scenario_file": "scenario.json",
+    "randseed": 2525,
+    "all_agent_speed_zero_break": false,
+    "agent_size": 10
+}
